@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/sett_locations_title">
+        <EditTextPreference
+            android:title="@string/sett_location_title"
+            android:key="sett_location"
+            android:summary="Select location"
+            android:defaultValue="@string/sett_location_default" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/sett_units_title">
+        <ListPreference
+            android:title="@string/sett_unit_system_title"
+            android:key="sett_unit_system"
+            android:summary="Select units"
+            android:defaultValue="@string/sett_unit_system_default"
+            android:entries="@array/sett_units_list_values"
+            android:entryValues="@array/sett_units_list_values" />
+
+        <ListPreference
+            android:title="@string/sett_units_speed_title"
+            android:key="sett_units_speed"
+            android:summary="Select speed unit"
+            android:defaultValue="@string/sett_units_metric_speed_default"
+            android:entries="@array/sett_units_metric_speed_list_values"
+            android:entryValues="@array/sett_units_metric_speed_list_values" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/sett_forecast_period_title">
+        <EditTextPreference
+            android:title="@string/sett_forecast_period_title"
+            android:key="sett_forecast_days_count"
+            android:summary="Set forecast period"
+            android:defaultValue="@string/sett_forecast_period_default"
+            android:inputType="number"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

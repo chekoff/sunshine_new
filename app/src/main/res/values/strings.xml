@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sunshine</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_hourly">Sunshine</string>
+    <string name="action_share">Share</string>
+</resources>

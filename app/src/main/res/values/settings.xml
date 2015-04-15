@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sett_units_title">Units</string>
+    <string name="sett_locations_title">Locations</string>
+    <string name="sett_location_title">Current Location</string>
+    <string name="sett_unit_system_title">Unit System</string>
+    <string name="sett_units_speed_title">Speed Units</string>
+    <string name="sett_forecast_period_title">Forecast Period</string>
+
+    <string name="sett_unit_system_default">Metric</string>
+    <string name="sett_location_default">Plovdiv</string>
+    <string name="sett_units_metric_speed_default">km/h</string>
+    <string name="sett_units_imperial_speed_default">mph</string>
+    <string name="sett_forecast_period_default">5</string>
+
+    <string-array name="sett_units_list_values">
+        <item>Metric</item>
+        <item>Imperial</item>
+    </string-array>
+
+    <string-array name="sett_units_metric_speed_list_values">
+        <item>km/h</item>
+        <item>m/s</item>
+    </string-array>
+
+    <string-array name="sett_units_imperial_speed_list_values">
+        <item>mph</item>
+        <item>fps</item>
+    </string-array>
+
+
+</resources>
