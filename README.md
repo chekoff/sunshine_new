@@ -1,0 +1,16 @@
+# Sunshine App
+- ActionBar application icons
+- Current location and current location button above Forecast list
+- Catch exception when no Map application installed
+- Activity with settings fragment
+- Settings activity back button
+- JSON Class returns JSONObject with forecast data (returns null when errors exist)
+- Class with settings keys and other constants
+- AsyncTasks for fetching forecast data, hourly forecast, taking screenshot 
+- Using same layout for daily and hourly forecasts
+- Implementing SharedPreferences.OnSharedPreferenceChangeListener for catching preferences changes (daily & hourly)
+- Added weather icons
+- Wind speed in km/h, m/s, mph, fph
+- Settings for forecast period in days
+- Settings Activity accessible from daily and hourly activities
+- Share hourly forecast screenshot
