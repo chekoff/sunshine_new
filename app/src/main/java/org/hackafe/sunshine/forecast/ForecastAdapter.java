@@ -52,10 +52,13 @@ public class ForecastAdapter extends BaseAdapter {
         TextView txtHumidity = (TextView) itemView.findViewById(R.id.txtHumidity);
         TextView txtWindSpeed = (TextView) itemView.findViewById(R.id.txtWindSpeed);
 
-        ImageView imgIcon = (ImageView) itemView.findViewById(R.id.imgIcon);
-        imgIcon.setImageResource(mContext.getResources().getIdentifier("ic_" + forecast.getIcon().substring(0, 3), "mipmap", mContext.getPackageName()));
-
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
+
+        String iconSet = sharedPreferences.getString(PREFS.KEY_ICON_SET, mContext.getString(R.string.sett_icon_set_default));
+
+        ImageView imgIcon = (ImageView) itemView.findViewById(R.id.imgIcon);
+        imgIcon.setImageResource(mContext.getResources().getIdentifier("ic_" + ((iconSet.equals("r")) ? "" : iconSet + "_") + forecast.getIcon().substring(0, 3), "drawable", mContext.getPackageName()));
+
         String unitSystem = sharedPreferences.getString(PREFS.KEY_CURRENT_UNIT_SYSTEM, mContext.getString(R.string.sett_unit_system_default));
         String unitsSpeed = sharedPreferences.getString(PREFS.KEY_CURRENT_UNITS_SPEED, mContext.getString(R.string.sett_units_metric_speed_default));
         String degrees = "C";

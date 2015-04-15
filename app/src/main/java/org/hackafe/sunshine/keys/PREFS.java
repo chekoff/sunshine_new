@@ -6,6 +6,7 @@ public class PREFS {
     public static final String KEY_CURRENT_UNITS_SPEED = "sett_units_speed";
     public static final String KEY_FORECAST_DAYS_COUNT = "sett_forecast_days_count";
     public static final String KEY_CURRENT_DATE = "sett_current_date";
+    public static final String KEY_ICON_SET = "sett_icon_set";
     public static final String KEY_FORECAST_DAILY = "daily";
     public static final String KEY_FORECAST_HOURLY = "hourly";
 }

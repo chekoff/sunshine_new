@@ -32,7 +32,17 @@
             android:key="sett_forecast_days_count"
             android:summary="Set forecast period"
             android:defaultValue="@string/sett_forecast_period_default"
-            android:inputType="number"/>
+            android:inputType="number" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/sett_icons_title">
+        <ListPreference
+            android:title="@string/sett_icon_set_title"
+            android:key="sett_icon_set"
+            android:summary="Select icon set"
+            android:defaultValue="@string/sett_icon_set_default"
+            android:entries="@array/sett_icon_set_entries"
+            android:entryValues="@array/sett_icon_set_values" />
     </PreferenceCategory>
 
 </PreferenceScreen>

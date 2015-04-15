@@ -63,8 +63,11 @@ public class HourlyFragment extends ListFragment implements
         mPreferenceListener =
                 new SharedPreferences.OnSharedPreferenceChangeListener() {
                     public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-                        if (!key.equals(PREFS.KEY_FORECAST_DAYS_COUNT))
+                        if (!key.equals(PREFS.KEY_FORECAST_DAYS_COUNT) &&
+                                !key.equals(PREFS.KEY_ICON_SET))
                             changedPreferences = true;
+                        if (key.equals(PREFS.KEY_ICON_SET))
+                            forecastAdapter.notifyDataSetChanged();
                     }
                 };
         mSharedPreferences.registerOnSharedPreferenceChangeListener(mPreferenceListener);

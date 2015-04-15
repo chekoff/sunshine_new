@@ -59,7 +59,10 @@ public class ForecastFragment extends ListFragment implements
         mPreferenceListener =
                 new SharedPreferences.OnSharedPreferenceChangeListener() {
                     public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-                        changedPreferences = true;
+                        if (!key.equals(PREFS.KEY_ICON_SET))
+                            changedPreferences = true;
+                        else
+                            forecastAdapter.notifyDataSetChanged();
                     }
                 };
         mSharedPreferences.registerOnSharedPreferenceChangeListener(mPreferenceListener);

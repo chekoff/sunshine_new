@@ -27,12 +27,14 @@ public class SettingsFragment extends PreferenceFragment implements
         ListPreference prefUnitSystem = (ListPreference) findPreference(PREFS.KEY_CURRENT_UNIT_SYSTEM);
         final ListPreference prefUnitsSpeed = (ListPreference) findPreference(PREFS.KEY_CURRENT_UNITS_SPEED);
         EditTextPreference prefForecastDaysCount = (EditTextPreference) findPreference(PREFS.KEY_FORECAST_DAYS_COUNT);
+        ListPreference prefIconSet = (ListPreference) findPreference(PREFS.KEY_ICON_SET);
 
         //setting summary to current preference values
         prefLocation.setSummary(prefLocation.getText());
         prefUnitSystem.setSummary(prefUnitSystem.getValue());
         prefUnitsSpeed.setSummary(prefUnitsSpeed.getValue());
         prefForecastDaysCount.setSummary(prefForecastDaysCount.getText() + " day/s");
+        prefIconSet.setSummary(prefIconSet.getEntry());
 
         if (prefUnitSystem.getValue().equals("Metric")) {
             prefUnitsSpeed.setDefaultValue(R.string.sett_units_metric_speed_default);
@@ -97,6 +99,11 @@ public class SettingsFragment extends PreferenceFragment implements
             case PREFS.KEY_FORECAST_DAYS_COUNT:
                 EditTextPreference prefForecastDaysCount = (EditTextPreference) findPreference(key);
                 prefForecastDaysCount.setSummary(sharedPreferences.getString(key, getResources().getString(R.string.sett_forecast_period_default)) + " day/s");
+                break;
+
+            case PREFS.KEY_ICON_SET:
+                ListPreference prefIconSet = (ListPreference) findPreference(key);
+                prefIconSet.setSummary(prefIconSet.getEntry());
                 break;
         }
     }

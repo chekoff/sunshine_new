@@ -37,10 +37,6 @@ public class HourlyActivity extends ActionBarActivity {
                     .commit();
         }
 
-        //showing activity logo
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.ic_main_icon);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
         //set title
         getSupportActionBar().setTitle("Hourly forecast");
         //showing back button

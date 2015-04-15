@@ -28,5 +28,28 @@
         <item>fps</item>
     </string-array>
 
+    <string name="sett_icons_title">Icons</string>
+    <string name="sett_icon_set_title">Icon Set</string>
+    <string name="sett_icon_set_default">r</string>
+
+    <string-array name="sett_icon_set_entries">
+        <item>Realistic</item>
+        <item>Flat Colorful</item>
+        <item>Flat Black</item>
+        <item>Flat White</item>
+        <item>Shadowed Colorful</item>
+        <item>Shadowed Dark</item>
+        <item>Shadowed Light</item>
+    </string-array>
+
+    <string-array name="sett_icon_set_values">
+        <item>r</item>
+        <item>fc</item>
+        <item>fd</item>
+        <item>fw</item>
+        <item>sc</item>
+        <item>sd</item>
+        <item>sw</item>
+    </string-array>
 
 </resources>
